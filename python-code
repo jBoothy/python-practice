@@ -1,0 +1,42 @@
+# Restaraunt Picker - Patrick Request
+import random
+
+loop = "true"
+while loop == "true":
+  ordering = ["Firehouse", "Burger Supreme", "Chick Fil'A"]
+  chicken = ["Raising Caines", "Dirty Bird"]
+  fast_food = ["Wendy's", "BK Lounge", "Arby's", "McDonalds", "Maverick"]
+  sandwich = ["Ernie's", "Sensuous Sandwich"]
+  burger = ["Mooyah's", "Wendy's", "BK Lounge"]
+  asian = ["Bumblebee's", "Coco's Lunchbox", "Panda Express"]
+  other = ["Noodle's & Company", "Ohana's"]
+
+  ordering_going = input("Is it being 'ordered' or 'pick up'? ")
+  if ordering_going == "ordered":
+    random_aray_item = random.choice(ordering)
+    print(random_aray_item)
+  elif ordering_going == "pick up":
+    choice = input("What type of food? Options: chicken, fast food, sandwich, burger, asian or other: ")
+    if choice == "chicken":
+      random_aray_item = random.choice(chicken)
+      print(random_aray_item)
+    elif choice == "fast food":
+      random_aray_item = random.choice(fast_food)
+      print(random_aray_item)
+    elif choice == "sandwich":
+      random_aray_item = random.choice(sandwich)
+      print(random_aray_item)
+    elif choice == "burger":
+      random_aray_item = random.choice(burger)
+      print(random_aray_item)
+    elif choice == "asian":
+      random_aray_item = random.choice(asian)
+      print(random_aray_item)
+    elif choice == "other":
+      random_aray_item = random.choice(other)
+      print(random_aray_item)
+    else:
+      print("Specify what type of food you want.")
+      loop = "false"
+  else:
+    print("Are you ordering or picking up?")

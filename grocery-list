@@ -1,0 +1,27 @@
+# Lists - Personal Practice
+
+def ask_yes_no():
+    while True:
+        x = input()
+        if x == "yes":
+            return True
+        if x == "no":
+            return False
+        print("Expecting yes/no")
+
+
+grocery_list = []
+
+while True:
+    grocery_item = input("Add an item to the list: ")
+    grocery_list.append((grocery_item))
+    print("Are you finished? ")
+
+    if ask_yes_no():
+        break
+print("Your list looks like it is: " + str(grocery_list))
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status

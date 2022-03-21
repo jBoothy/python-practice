@@ -1,0 +1,8 @@
+# Age Calc - Personal Practice
+
+current_age = int(input("What is your age? "))
+if current_age < 100:
+  age = int(100 - current_age)
+  print(f"It will take {age} years to get to 100 years old if you are {current_age} years old.")
+else:
+  print("You are already over 100.")

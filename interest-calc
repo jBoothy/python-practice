@@ -1,0 +1,12 @@
+# Interest Calculator - Bailey's Homework
+
+# Make an interest calculator
+# If you put in $200 at 1.7% annual interest rate how much is balance after 6 months?
+
+month = int(input("How many months? "))
+year_tax_rate = float(input("What is your yearly tax rate? "))
+yearly_to_monthly = float(year_tax_rate / 100 / 12)
+monthly_tax = float((200 * yearly_to_monthly) * month)
+base_per_month = int(200 * month)
+total = float(base_per_month) + monthly_tax
+print(f"Your total will be: ${round(total,2)}.")

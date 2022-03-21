@@ -1,0 +1,13 @@
+# Shirt Size Calculator - Bailey's Homework
+
+shirt_size = str(input("What is your shirt size in inches? "))
+if shirt_size >= "46":
+  print(f"You wear a XXL size shirt.")
+elif shirt_size >= "43":
+  print(f"You wear a XL size shirt.")
+elif shirt_size >= "40":
+  print(f"You wear a L size shirt.")
+elif shirt_size >= "38":
+  print(f"You wear a M size shirt.")
+else:
+  print(f"You wear a S size shirt.")

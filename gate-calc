@@ -1,0 +1,146 @@
+# Gate Frame Calculator - Work Solutions
+loop = "true"
+while (loop == "true"):
+  gate_type = input("Is the gate seclusions, horizons, iron or lodgepole/split rail? ")
+  if gate_type == "seclusions":
+    actual_opening = input("Is it actual or opening? ")
+    if actual_opening == "actual":
+      single_double = input("Is it a single opening or double gate opening? ")
+      if single_double == "single":
+        sec_width = float(input("What is the opening width? "))
+        width = float(sec_width - 4.625)
+        sec_height = float(input("What is the opening height? "))
+        height = float(sec_height - 3.375)
+        print(f"Your frame size will be {width}\" x {height}\".")
+        loop = "false"
+      elif single_double == "double":
+        sec_width = float(input("What is the opening width? "))
+        width = float(sec_width - 9.25) / 2
+        sec_height = float(input("What is the opening height? "))
+        height = float(sec_height - 3.375)
+        print(f"Your frame sizes will be {width}\" x {height}\" each.")
+        loop = "false"
+      else:
+        print("Please specify a 'single' or 'double'")
+    elif actual_opening == "opening":
+      single_double = input("Is it a single opening or double gate opening? ")
+      if single_double == "single":
+        sec_width = float(input("What is the opening width? "))
+        width = float(sec_width - 6.625)
+        sec_height = float(input("What is the opening height? "))
+        height = float(sec_height - 3.375)
+        print(f"Your frame size will be {width}\" x {height}\".")
+        loop = "false"
+      elif single_double == "double":
+        sec_width = float(input("What is the opening width? "))
+        width = float(sec_width - 12.25) / 2
+        sec_height = float(input("What is the opening height? "))
+        height = float(sec_height - 3.375)
+        print(f"Your frame sizes will be {width}\" x {height}\" each.")
+        loop = "false"
+      else:
+        print("Please specify a 'single' or 'double'")
+    else:
+      print("Please specify actual or opening.")
+  elif gate_type == "horizons":
+    actual_opening = input("Is it actual or opening? ")
+    if actual_opening == "actual":
+      single_double = input("Is it a single opening or double gate opening? ")
+      if single_double == "single":
+        sec_width = float(input("What is the opening width? "))
+        width = float(sec_width - 4.625)
+        sec_height = float(input("What is the opening height? "))
+        height = float(sec_height - 2)
+        print(f"Your frame size will be {width}\" x {height}\".")
+        loop = "false"
+      elif single_double == "double":
+        sec_width = float(input("What is the opening width? "))
+        width = float(sec_width - 9.25) / 2
+        sec_height = float(input("What is the opening height? "))
+        height = float(sec_height - 2)
+        print(f"Your frame sizes will be {width}\" x {height}\" each.")
+        loop = "false"
+      else:
+        print("Please specify a 'single' or 'double'")
+    elif actual_opening == "opening":
+      single_double = input("Is it a single opening or double gate opening? ")
+      if single_double == "single":
+        sec_width = float(input("What is the opening width? "))
+        width = float(sec_width - 6.625)
+        sec_height = float(input("What is the opening height? "))
+        height = float(sec_height - 4.125)
+        print(f"Your frame size will be {width}\" x {height}\".")
+        loop = "false"
+      elif single_double == "double":
+        sec_width = float(input("What is the opening width? "))
+        width = float(sec_width - 12.25) / 2
+        sec_height = float(input("What is the opening height? "))
+        height = float(sec_height - 4.125)
+        print(f"Your frame sizes will be {width}\" x {height}\" each.")
+        loop = "false"
+      else:
+        print("Please specify a 'single' or 'double'")
+    else:
+      print("Please specify actual or opening.")
+  elif gate_type == "iron":
+    actual_opening = input("Is it actual or opening? ")
+    if actual_opening == "actual":
+      single_double = input("Is it a single or a double gate? ")
+      if single_double == "single":
+        iron_width = float(input("What is the opening width? "))
+        width = float(iron_width - 3)
+        print(f"Your cut panel size will be {width}\" each with 1 1/2\" posts or {width - 1}\" with 2\" posts.")
+        loop = "false"
+      elif single_double == "double":
+        iron_dbl_width = float(input("What is the opening width? "))
+        width = float(iron_dbl_width - 6) / 2
+        print(f"Your cut panel sizes will be {width}\" each with 1 1/2\" posts or {width - 1}\" with 2\" posts.")
+        loop = "false"
+      else:
+        print("Please specify a 'single' or 'double'")
+    elif actual_opening == "opening":
+      single_double = input("Is it a single or a double gate? ")
+      if single_double == "single":
+        iron_width = float(input("What is the opening width? "))
+        width = float(iron_width - 5)
+        print(f"Your cut panel size will be {width}\" each with 1 1/2\" posts or {width - 1}\" with 2\" posts.")
+        loop = "false"
+      elif single_double == "double":
+        iron_dbl_width = float(input("What is the opening width? "))
+        width = float(iron_dbl_width - 9) / 2
+        print(f"Your cut panel sizes will be {width}\" each with 1 1/2\" posts or {width - 1}\" with 2\" posts.")
+        loop = "false"
+      else:
+        print("Please specify a 'single' or 'double'")
+    else:
+      print("Please specify actual or opening.")
+  elif gate_type == "lodgepole":
+    single_double = input("Is it a single or a double gate? ")
+    if single_double == "single":
+      lodgepole_width = float(input("What is the opening width? "))
+      width = float(lodgepole_width - 5 - 7.5)
+      print(f"Your rails will be cut at {width}\".")
+      loop = "false"
+    elif single_double == "double":
+      lodgepole_width = float(input("What is the opening width? "))
+      width = float(lodgepole_width - 10) / 2 - 7.5
+      print(f"Your rails will be cut at {width}\".")
+      loop = "false"
+    else:
+      print("Please specify a 'single' or 'double'")
+  elif gate_type == "split rail":
+    single_double = input("Is it a single or a double gate? ")
+    if single_double == "single":
+      splitrail_width = float(input("What is the opening width? "))
+      width = float(splitrail_width - 5 - 7.5)
+      print(f"Your rails will be cut at {width}\".")
+      loop = "false"
+    elif single_double == "double":
+      splitrail_width = float(input("What is the opening width? "))
+      width = float(splitrail_width - 10) / 2 - 7.5
+      print(f"Your rails will be cut at {width}\".")
+      loop = "false"
+    else:
+      print("Please specify a 'single' or 'double'")
+  else:
+    print("Please give a valid gate style.")
